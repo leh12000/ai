@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% for c in chapter %}
+<img src="{{c.image.url}}" class="cover">
+  <h2 class="titre">Chapter {{chapter.number}}: </h2><h3 class="chapter"> {{ c.title }}</h3>
+  <p>{{ c.content | safe }}</p>
+{% endfor %}
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if chapter.has_previous %}
+            <a href="?page={{ chapter.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ chapter.number }} of {{ chapter.paginator.num_pages }}.
+        </span>
+
+        {% if chapter.has_next %}
+            <a href="?page={{ chapter.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}

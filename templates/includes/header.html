@@ -1,0 +1,50 @@
+{% load static %}
+<div class="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="brand">
+                                <a href="index.html">
+                                    <img src="{% static 'sewa/img/logo.png' %}" alt="Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+233 26 181 5407"><i class="fa fa-phone-alt"></i>+233 26 181 5407</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:sewainstitute.edu@gmail.com"><i class="fa fa-envelope"></i>sewainstitute.edu@gmail.com</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+                                        <a href="https://www.facebook.com/SewaProudToBe"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="http://www.youtube.com/@mbaiadoumzacharie4239"><i class="fab fa-youtube"></i></a>
+                                        <a href="https://www.instagram.com/sewainstitute?igsh=MWJyMDMyMTkyeWQyag=="><i class="fab fa-instagram"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+                                        <a href="{% url 'mylearning' %}" class="nav-item nav-link">My Learning</a>
+                                        <a href="about.html" class="nav-item nav-link">About Us</a>
+                                        <a href="services.html" class="nav-item nav-link">Services</a>
+                                        <a href="portfolio.html" class="nav-item nav-link active">Portfolio</a>
+                                        <a href="single.html" class="nav-item nav-link">Single Page</a>
+                                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

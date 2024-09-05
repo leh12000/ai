@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="contact">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="editor-info">
+                                <h2 class="section-title">Learning Mode</h2>
+                                <div class="editor-item">
+                                    <div class="editor-img">
+                                        <a href="{% url 'chatbox' %}"><img src="{% static 'img/convince.jpg' %}" alt="Editor Image"></a>
+                                    </div>
+                                    <div class="editor-text">
+                                        <h3>Chat Mode</h3>
+                                        <p>Enhance your language skills by chatting with our AI teacher</p>
+                                    </div>
+                                </div>
+                                <div class="editor-item">
+                                    <div class="editor-img">
+                                        <img src="{% static 'img/convince.jpg' %}" alt="Editor Image">
+                                    </div>
+                                    <div class="editor-text">
+                                        <h3>Debates</h3>
+                                        <p>Argue for or against interesting and intriguing topics.</p>
+                                    </div>
+                                </div>
+                                <div class="editor-item">
+                                    <div class="editor-img">
+                                        <img src="{% static 'img/at_her_phone.png' %}" alt="Editor Image">
+                                    </div>
+                                    <div class="editor-text">
+                                        <h3>Sentence Mode</h3>
+                                        <p>Build a solid foundation of your language skills by learning basics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+{% endblock %}

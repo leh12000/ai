@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+     <div class="hero">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h2>Welcome to </h2>
+                            <h2><span>SEWA</span> Institute</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{% static 'img/eleve.png' %}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero End -->
+
+
+            <!-- About Start -->
+            <div class="about">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div id="video-section">
+                                <div class="youtube-player" data-id="https://www.facebook.com/SewaProudToBe/videos/505665532044903/?mibextid=rS40aB7S9Ucbxw6v"></div>
+
+                                <script>
+                                    document.addEventListener("DOMContentLoaded",
+                                        function() {
+                                            var div, n,
+                                                v = document.getElementsByClassName("youtube-player");
+                                            for (n = 0; n < v.length; n++) {
+                                                div = document.createElement("div");
+                                                div.setAttribute("data-id", v[n].dataset.id);
+                                                div.innerHTML = labnolThumb(v[n].dataset.id);
+                                                div.onclick = labnolIframe;
+                                                v[n].appendChild(div);
+                                            }
+                                        });
+
+                                    function labnolThumb(id) {
+                                        var thumb = '<img src="{% static 'sewa/img/sewa_cover.jpg' %}">',
+                                            play = '<div class="play"></div>';
+                                        return thumb.replace("ID", id) + play;
+                                    }
+
+                                    function labnolIframe() {
+                                        var iframe = document.createElement("iframe");
+                                        var embed = "https://www.facebook.com/plugins/video.php?href=ID";
+                                        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+                                        iframe.setAttribute("frameborder", "0");
+                                        iframe.setAttribute("allowfullscreen", "1");
+                                        this.parentNode.replaceChild(iframe, this);
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="section-title">Transformez Votre Avenir avec Sewa Institute Ghana</h2>
+                            <p>
+                                À Sewa Institute Ghana, nous nous engageons à façonner votre avenir grâce à des formations de pointe en linguistique et en informatique. Que vous soyez étudiant enthousiaste ou professionnel en quête de nouvelles compétences, notre institut est conçu pour vous offrir une expérience d'apprentissage exceptionnelle et enrichissante.                            </p>
+                            <p>
+
+                            </p>
+                            <a class="btn" href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container-fluid">
+                    <div class="section-header">
+                        <h2>Nos Services</h2>
+                        <p>Nous offrons différents types de services.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Cours de <br>Langue</h3>
+                                <img src="{% static 'sewa/img/langue.png' %}" alt="Service">
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Cours d'Informatique</h3>
+                                <img src="{% static 'sewa/img/informatique.png' %}" alt="Service">
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Cours Professionnels <br>.</h3>
+                                <img src="{% static 'sewa/img/cor.png' %}" alt="Service">
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Hebergements <br>. </h3>
+                                <img src="{% static 'sewa/img/accomo.png' %}" alt="Service">
+                                <p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+
+
+            <!-- FAQs Start -->
+            <div class="faqs">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h2 class="section-title">Les Questions Fréquemment Posées</h2>
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true">
+                                            Quels sont les critères d’admission pour vos programmes de formation professionnelle?                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Les critères d’admission varient selon le programme. Généralement, un diplôme d'études secondaires est requis, mais certains programmes peuvent aussi demander une expérience professionnelle dans le domaine ou des prérequis spécifiques. Nous recommandons de consulter la page dédiée à chaque programme pour plus de détails ou de contacter notre service d’admission.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                                            Proposez-vous des formations en alternance ou en apprentissage?                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Oui, nous proposons plusieurs programmes en alternance qui permettent aux étudiants de combiner formation théorique en classe et expérience pratique en entreprise. Cela leur offre l’opportunité d’acquérir des compétences directement sur le terrain tout en poursuivant leurs études.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                            Quels sont les débouchés après la formation?
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Nos formations sont conçues pour répondre aux besoins du marché du travail. À la fin de leur parcours, les diplômés peuvent accéder à divers postes dans leur domaine de formation, comme technicien, opérateur, ou gestionnaire. De plus, certaines formations permettent également d'accéder à des métiers en forte demande, avec de bonnes perspectives de recrutement.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                            Offrez-vous des services d'accompagnement pour l'insertion professionnelle?
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Oui, nous avons un service dédié à l’accompagnement des étudiants dans leur insertion professionnelle. Cela inclut l’aide à la rédaction de CV, la préparation aux entretiens, et la mise en relation avec nos partenaires industriels. Nous organisons également des ateliers et des journées de recrutement pour faciliter l’entrée des étudiants sur le marché du travail.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn" href="">Ask more</a>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{% static 'sewa/img/question.jpg' %}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQs End -->
+
+
+            <!-- Testimonial Start -->
+            <div class="testimonial">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Clients Review</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium ornare velit non</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="testimonial-slider-nav">
+                                <div class="slider-nav"><img src="{% static 'sewa/img/profile.png' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                                <div class="slider-nav"><img src="{% static 'img/testimonial-1.jpg' %}" alt="Testimonial"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="testimonial-slider">
+                                <div class="slider-item">
+                                    <h3>Mamadou Traore</h3>
+                                    <h4>Software Engeineer</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                                <div class="slider-item">
+                                    <h3>Customer Name</h3>
+                                    <h4>profession</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial End -->
+
+
+            <!-- News Start -->
+            <div class="news">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="{% static 'sewa/img/bourse.jpg' %}" alt="Image">
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="section-title">Read Latest News</h2>
+                            <p>
+                                        BOURSES D'ÉTUDES EN Anglais
+                            </p>
+                            <p>
+                                Date limite de candidature : 30 Septembre 2024|  Sewa-Institute Programme 2025.
+                                Deposez vos candidatures et saisissez l'ultime opportunité  d'apprendre l'anglais, grâce aux 15 places de bourses, financées à 50% par l'une des meilleures écoles de langue au Ghana *"SEWA INSTITUTE GHANA".*
+                                Cette opportunité est ouverte aux étudiants, entrepreneurs, homme/ femme d'affaires, leaders, ayant l'aspiration de diversifier et enrichir leurs connaissances linguistiques, et intellectuelles afin de mieux se positionner sur le marché de l'emploi, des affaires ou bénéficiez de collaborations Internationales.
+                                Il offre aux meilleurs candidats sélectionnés la possibilité d'entreprendre un programme de niveau de compétence en Anglais, en bénéficiant de 50% des frais de scolarité, lequel, inclu les frais d'hébergement et du programme sur une durée de 9 mois à 12 mois.
+                                Le programme de niveau de compétence en anglais éligible au Ghana commence en Janvier de chaque année.
+                            </p>
+                            <a class="btn" href="https://www.facebook.com/reel/2417884881749730/?app=fbl">Savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+{% endblock %}

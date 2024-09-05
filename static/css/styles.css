@@ -1,0 +1,264 @@
+.chat-section {
+
+    padding: 20px 0;
+}
+
+.chat-container {
+    background-color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    display: inline;
+    flex-direction: column;
+    height: 80vh; /* Hauteur ajustée pour occuper plus d'espace */
+}
+
+.chat-header {
+    background-color: #00539C;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #0056cc;
+}
+
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0047ab;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00539C;
+}
+
+
+.ai-message, .user-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ai-message .ai-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+
+.user-message .message-text {
+    background-color: #d1e7fd;
+    margin-left: auto;
+
+}
+
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none; /* Empêche le redimensionnement manuel */
+    max-height: 180px; /* Hauteur maximale définie */
+    overflow-y: auto; /* Permet le défilement si la hauteur maximale est atteinte */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#send-button {
+    background-color: #0047ab;
+    color: #fff;
+    border: none;
+
+    cursor: pointer;
+    border-left: 0px solid #ddd;
+    outline: none;
+}
+
+#send-button:hover {
+    background-color: #0056cc;
+}
+
+
+/* Styles pour mobile */
+@media (max-width: 768px) {
+    .input-group {
+        display: flex;
+        align-items: flex-end;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    #user-input {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+        resize: none;
+        max-height: 150px;
+        overflow-y: auto;
+
+
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    #send-button {
+        background-color: #0047ab;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-left: 2px solid #ddd;
+        outline: none;
+        width: 20%; /* Ajuster la largeur à la taille du contenu */
+        flex: 0 0 auto; /* Empêcher le bouton de s'étirer pour occuper tout l'espace */
+    }
+
+    #send-button:hover {
+        background-color: #0056cc;
+    }
+
+    .chat-container {
+        width: 80%;
+
+
+    }
+
+   .received {
+      background-color: #f1f0f0;
+      align-self: flex-start;
+
+    }
+   .message {
+      margin-bottom: 15px;
+      list-style: none;
+
+    }
+
+   button {
+    background-color: #0047ab;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+}
+
+
+
+
+
+.messages-box {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+.messages-list {
+  padding-left: 0;
+}
+
+.message {
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.message-text {
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+.sent {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.received {
+  background-color: #f1f0f0;
+  align-self: flex-start;
+
+}
+
+.message-form {
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.message-input {
+  flex: 1;
+  border-radius: 0;
+  border-right: none;
+}
+
+.btn-send {
+  border-radius: 0;
+}
+
+.chat-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#myAudio {
+    display: none;
+}
+.play {
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.play:hover {
+    background-color: #45a049;
+}
