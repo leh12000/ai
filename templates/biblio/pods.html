@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="video-grid">
+        <div class="video-item">
+            <div class="cover-container" onclick="playVideo(this)">
+                <img src="{% static 'img/convince.jpg' %}" alt="Couverture de la vidéo" class="video-cover">
+                <div class="play-button">
+                    <img src="{% static 'img/playb.png' %}" alt="Play">
+                </div>
+            </div>
+            <iframe class="video-player" src="https://www.youtube.com/embed/ZhIKtslU3TM?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-item">
+            <div class="cover-container" onclick="playVideo(this)">
+                <img src="{% static 'img/convince.jpg' %}" alt="Couverture de la vidéo" class="video-cover">
+                <div class="play-button">
+                    <img src="{% static 'img/playb.png' %}" alt="Play">
+                </div>
+            </div>
+            <iframe class="video-player" src="https://www.youtube.com/embed/ZhIKtslU3TM?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Ajoute plus de vidéos ici -->
+    </div>
+
+
+
+
+{% endblock %}

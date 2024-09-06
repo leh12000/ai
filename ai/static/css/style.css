@@ -1897,3 +1897,50 @@ a:focus {
 .chapter{
     display: inline;
 }
+
+/**** video **/
+
+
+
+
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-item {
+    position: relative;
+}
+
+.cover-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-cover {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+}
+
+.play-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.video-player {
+    width: 100%;
+    height: 0;
+    display: none;
+}

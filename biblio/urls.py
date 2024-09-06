@@ -27,5 +27,6 @@ urlpatterns = [
     path("details/<int:book_id>/", views.details,name="details"),
     path("contentBook/<int:id_book>/", views.contentBook,name="contentBook"),
     path("LearninMode/", views.learningmode,name="learningmode"),
+    path("pods/", views.pods,name="pods"),
 
 ]

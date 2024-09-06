@@ -172,3 +172,6 @@ def contentBook(request,id_book):
 def learningmode(request):
 
     return render(request,"biblio/learningmode.html")
+
+def pods(request):
+    return render(request, "biblio/pods.html")
