@@ -25,7 +25,7 @@ nlp = spacy.load('en_core_web_sm')
 
 
 apikey = 'qbtj6epkpOVZ3mgJ98mQmxpCJWbCwCME0h2d-ouI7BYE'
-url = 'https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/edf80d88-61a8-41c7-896c-21f2f3f767ea/v1/synthesize'
+url = 'https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/edf80d88-61a8-41c7-896c-21f2f3f767ea/v1/synthesize?voice=en-US_AllisonV3Voice'
 
 
 
@@ -138,13 +138,14 @@ def askAI(message):
 def chatbox(request):
     if request.method=="POST":
         message=request.POST.get("message")
-        response=askAI(message)
+        prompt = f"This platform helps users improve their English. Respond to questions or requests while staying within the context of English learning. If a request is outside of this context, reply by redirecting the user back to English learning. User message:{message}"
+        response=askAI(prompt)
         text = response
         audio_filename = f'audio_{enlever(message)}.wav'
         audio_file_path = os.path.join(settings.MEDIA_ROOT,"audio", audio_filename)
         data = {
             'text': text,
-            'voice': 'en-US_LisaV3Voice',  # Choisissez la voix que vous souhaitez
+              # Choisissez la voix que vous souhaitez
             'accept': 'audio/wav'
         }
         answer = requests.post(url, json=data, headers=headers, auth=HTTPBasicAuth('apikey', apikey))
@@ -159,6 +160,7 @@ def chatbox(request):
 
 
     return render(request,"biblio/chatbox.html")
+
 
 
 def contentBook(request,id_book):

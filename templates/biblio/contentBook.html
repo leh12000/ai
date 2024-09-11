@@ -2,11 +2,11 @@
 
 
 {% block content %}
-
+<div class="contentBook">
 {% for c in chapter %}
 <img src="{{c.image.url}}" class="cover">
-  <h2 class="titre">Chapter {{chapter.number}}: </h2><h3 class="chapter"> {{ c.title }}</h3>
-  <p>{{ c.content | safe }}</p>
+  <h2 class="titre">Chapter {{chapter.number}}: </h2><h6 class="chapter"> {{ c.title }}</h6>
+  <p class="bookcontent1">{{ c.content | safe }}</p>
 {% endfor %}
 
 
@@ -25,5 +25,5 @@
         {% endif %}
     </span>
 </div>
-
+</div>
 {% endblock %}

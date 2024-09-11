@@ -1888,14 +1888,23 @@ a:focus {
 
 
 .titre{
-    display: inline;
+    text-align:center;
 }
 .cover{
     display:block;
 }
 
 .chapter{
-    display: inline;
+    text-align:center;
+    margin-top:15px;
+}
+.contentBook{
+
+
+
+}
+.bookcontent1{
+
 }
 
 /**** video **/
@@ -1943,4 +1952,13 @@ a:focus {
     width: 100%;
     height: 0;
     display: none;
+}
+.pod_title{
+    text-align:center;
+
+}
+
+.contentBook img{
+    width:100%;
+    height:900px;
 }
